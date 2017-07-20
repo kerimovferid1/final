@@ -1,9 +1,10 @@
-﻿@{ 
+﻿
+@{
     Layout = "~/Views/Shared/HeaderFooter.cshtml";
 }
-<div>
-    <div class="paddingTop"></div>
-</div>
+
+
+
 <div id="imgPart">
     <div class="img"></div>
     <div class="col-md-12 col-sm-12 col-xs-12 hidden-xs hidden-sm">
@@ -15,7 +16,7 @@
                 <a href="">Things to do</a>
             </li>
             <li>
-                <a href="">Walking and Hiking</a>
+                <a href="">Lakes and Nature</a>
             </li>
         </ul>
     </div>
@@ -35,47 +36,7 @@
         </div>
     </div>
 </div>
-<div id="holidays">
-    <div class="maxWidth">
-        <div class="row">
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <div class="img-hover">
-                    <img src="~/publicFolder/images/02.jpg" class="img-responsive" alt="">
-                </div>
 
-            </div>
-            <div class="col-md-6 col-sm-6 col-xs-12">
-                <h4>Hiking and cycling holidays</h4>
-                <div class="line"></div>
-                <h3>Austrian trails</h3>
-                <p>It’s amidst a landscape dotted by mountains, valleys, lakes, and forests that an Austrian summer holiday plays out in grand style. Recreation-wise, the choices are plentiful with hiking and biking among the most popular. Trails here lead seemingly without end, with options for all preferences and ability. Along the way, prepare for delightful surprises, unexpected discoveries, and generous hosts pleased to point you in the right direction.</p>
-                <p>Explore a collection of holiday experiences and accommodation that sum up some of the best on foot and on two wheels. Happy trails to you.</p>
-            </div>
-
-        </div>
-    </div>
-
-</div>
-<div id="reasons">
-    <div class="head">
-        <h3>10 reasons to choose Azerbaijan</h3>
-    </div>
-    <div class="photo">
-        <div class="into">
-        </div>
-        <div class="intoTwo">
-            <div class="line"></div>
-            <h4>Your ideal hiking destination</h4>
-            <p>Whether you explore one of the national parks, experience the beauty of the Alps on a long distance trail or head out on a family day hike, Austria offers unlimited opportunities.</p>
-            <div class="light">
-                <i class="fa fa-lightbulb-o" aria-hidden="true"></i>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-	</div>
 <div id="destination">
     <div class="maxWidth">
         <div class="row">
@@ -143,10 +104,22 @@
                 </div>
             </div>
         </div>
-        <div class="row photos ">
-            <div class="col-md-6 col-sm-6 col-xs-12 myHidden">
+
+        <button class="loadMore">Load more</button>
+    </div>
+</div>
+
+<div id="destination">
+    <div class="maxWidth">
+        <div class="row">
+            <h3>
+                Popular walking and hiking destinations
+            </h3>
+        </div>
+        <div class="row photos">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="img-hover">
-                    <img src="~/publicFolder/images/08.jpg" class="img-responsive" alt="">
+                    <img src="~/publicFolder/images/04.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="myContent">
                     <h4>Wilder Kaiser</h4>
@@ -158,9 +131,9 @@
                     </a>
                 </div>
             </div>
-            <div class="col-md-6 col-sm-6 col-xs-12 myHidden">
+            <div class="col-md-6 col-sm-6 col-xs-12">
                 <div class="img-hover">
-                    <img src="~/publicFolder/images/09.jpg" class="img-responsive" alt="">
+                    <img src="~/publicFolder/images/05.jpg" class="img-responsive" alt="">
                 </div>
                 <div class="myContent">
                     <h4>Wilder Kaiser</h4>
@@ -173,9 +146,12 @@
                 </div>
             </div>
         </div>
+
+
         <button class="loadMore">Load more</button>
     </div>
 </div>
+
 
 <div id="moreWalking">
     <div class="maxWidth">
@@ -258,61 +234,14 @@
     </div>
 </div>
 
-<div id="addition">
-    <div class="maxWidth">
-        <div class="row">
-            <h3>
-                Good to know
-            </h3>
-        </div>
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="myContent">
-                    <h4>
-                        Wheelchair hiking in Tirol
-                    </h4>
-                    <p>
-                        Tirol is a world leader in its facilities to help disabled people reach its peaks. In addition to extensive ski facilities in winter, there are 24 approved wheelchair hiking routes for summer. And with the help of Roll Rinn stretchers, it is even possible to reach the summit of a mountain.
-                    </p>
-                    <a href="">
-                        Hiking without barriers
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="myContent">
-                    <h4>
-                        Wheelchair hiking in Tirol
-                    </h4>
-                    <p>
-                        Tirol is a world leader in its facilities to help disabled people reach its peaks. In addition to extensive ski facilities in winter, there are 24 approved wheelchair hiking routes for summer. And with the help of Roll Rinn stretchers, it is even possible to reach the summit of a mountain.
-                    </p>
-                    <a href="">
-                        Hiking without barriers
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="myContent">
-                    <h4>
-                        Wheelchair hiking in Tirol
-                    </h4>
-                    <p>
-                        Tirol is a world leader in its facilities to help disabled people reach its peaks. In addition to extensive ski facilities in winter, there are 24 approved wheelchair hiking routes for summer. And with the help of Roll Rinn stretchers, it is even possible to reach the summit of a mountain.
-                    </p>
-                    <a href="">
-                        Hiking without barriers
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
 
-</div>
+<!-- <div class="video"></div> -->
+
+
 
 <section id="discover">
     <div class="maxWidth">
-        <h2 class="">Discover Azerbaijan</h2>
+        <h2 class="">This may also interest you</h2>
 
         <div class="owl-carousel owl-theme">
             <div class="items">
@@ -343,66 +272,5 @@
 
     </div>
 
-    </div>
 </section>
 
-<div id="plan">
-    <div class="maxWidth">
-        <div class="row">
-            <h2>
-                Plan your trip with us...
-            </h2>
-        </div>
-        <div class="row"></div>
-        <div class="row">
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="myContent">
-                    <p>
-                        Give us a call or chat with us here Monday to Friday from 8am to noon. Outside of our office hours please drop us an email and we'll be happy to answer your questions.
-                    </p>
-                    <h4>
-                        Holiday information
-                    </h4>
-                    <p>
-                        Our holiday experts are here to assist you with your holiday planning. Give us a call from 8am to noon or drop us an email and we'll be happy to answer your questions.
-                    </p>
-                    <h4>
-                        Telephone: 00800 400 200 00*
-
-                    </h4>
-                    <a href="">
-                        info@austria.info
-                    </a>
-                    <p>
-                        *toll-free; calls from mobile networks may incur charges
-                    </p>
-                </div>
-
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="myContent">
-                    <h4>Brochures</h4>
-                    <p>
-                        Download and order free brochures for your holidays in Austria.
-                    </p>
-                    <a href="">
-                        Brochures & Catalogues
-                    </a>
-                </div>
-            </div>
-            <div class="col-md-4 col-sm-4 col-xs-12">
-                <div class="myContent">
-                    <h4>
-                        Newsletter
-                    </h4>
-                    <p>
-                        Subscribe to our free monthly e-newsletter and receive great information about Austria.
-                    </p>
-                    <a href="">
-                        Newsletter
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>

@@ -45,6 +45,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
     </Reference>
@@ -52,6 +58,8 @@
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
     <Reference Include="System.Web.ApplicationServices" />
@@ -141,19 +149,48 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\CusController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\Cus.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cus.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cus.cs">
+      <DependentUpon>Cus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cus.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cus.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Models\Cus1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Cus.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Models\MyVieWModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="favicon.ico" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Models\Cus.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Cus.edmx</DependentUpon>
+      <LastGenOutput>Cus.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Models\Cus.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>Cus.edmx</DependentUpon>
+      <LastGenOutput>Cus1.cs</LastGenOutput>
+    </Content>
     <Content Include="publicFolder\headercss\bootstrap.css" />
     <Content Include="publicFolder\headercss\css\bootstrap-theme.css" />
     <Content Include="publicFolder\headercss\css\bootstrap-theme.min.css" />
@@ -499,6 +536,13 @@
     <Content Include="publicFolder\pluginOwl\LICENSE" />
     <Content Include="publicFolder\pluginOwl\README.md" />
     <Content Include="publicFolder\pluginOwl\src\.jshintrc" />
+    <EntityDeploy Include="Models\Cus.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>Cus.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <Content Include="Models\Cus.edmx.diagram">
+      <DependentUpon>Cus.edmx</DependentUpon>
+    </Content>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -528,25 +572,30 @@
     <Content Include="Views\Home\AboutAze.cshtml" />
     <Content Include="Views\Home\ContactUs.cshtml" />
     <Content Include="Views\Home\Walking.cshtml" />
+    <Content Include="Views\Home\Cycling.cshtml" />
+    <Content Include="Views\Home\Lakes.cshtml" />
+    <Content Include="Views\Home\Skiing.cshtml" />
+    <Content Include="Views\Home\whereToStay.cshtml" />
+    <Content Include="Views\Home\Cities.cshtml" />
+    <Content Include="Views\Home\Round.cshtml" />
+    <Content Include="Views\Cus\Create.cshtml" />
+    <Content Include="Views\Cus\Delete.cshtml" />
+    <Content Include="Views\Cus\Details.cshtml" />
+    <Content Include="Views\Cus\Edit.cshtml" />
+    <Content Include="Views\Cus\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Models\" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Folder Include="Image\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
